@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/allenia');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: Poppins;
+    color: #eee;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+*::selection{
+    background-color: #fff;
+    color: #8f0185;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background:#8f0185;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  
+    border-radius: 50px;
+  }
+
+/*  cursor  */
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #8f0185;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+}
+
+
+#c-blur {
+    height: 500px;
+    width: 500px;
+    background-color: #61005a64;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+}
+
+
+:root {
+    --width: min(1200px, 100%);
+}
+
+
+header {
+    width: var(--width);
+    margin: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    padding-inline: 20px;
+}
+
+header .logo img{
+    height: 100px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2em;
+    text-decoration: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav ul li.active {
+    border-bottom: 1px solid #eee8;
+}
+
+#bg_city {
+    margin-top: -50px;
+}
+
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+}
+
+.banner .content {
+    position: absolute;
+    width: var(--width);
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 10vh 40vh 20vh;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5em;
+    gap: 5em;
+    position: relative;
+}
+
+main::after {
+    width: 100%;
+    height: 100px;
+    content: '';
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: 100%;
+    background-image: linear-gradient(to top, #000, #0000);
+}
+
+.friend {
+    width: var(--width);
+    padding-inline: 20px;
+}
+
+.friend ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.banner .content .item:nth-child(1) {
+    /*display: flex;*/
+    justify-content: space-between;
+    align-content: center;
+}
+
+.banner .content .item:nth-child(1) div:nth-child(2) {
+    text-align: right;
+}
+
+.banner .title {
+    text-align: center;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Allenia', sans-serif;
+}
+
+.banner .title p {
+    margin: 0;
+    padding: 0;
+}
+
+.friend ul img {
+    height: 50px;
+}
+
+.me {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.me h1,
+.me h2 {
+    font-weight: 500;
+}
+
+.me h1 {
+    font-size: 4em;
+}
+
+.me h2 {
+    font-size: 4em;
+}
+
+.lorem {
+    padding-inline: 20px;
+    width: var(--width);
+    columns: 400px 2;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .me h1,
+    .me h2 {
+        font-size: 3em;
+    }
+    .banner .title {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .me h1,
+    .me h2 {
+        font-size: 2em;
+    }
+
+    header{
+        display: block;
+    }
+
+    header a{
+        text-align: center;
+        justify-content: left;
+    }
+}
+#bg_city {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+#bg_city svg {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+
+/*------------------ PRODUCTS SECTION-1 --------------------*/
+
+.first {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+    align-items: center;
+    font-weight: 900;
+}
+
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+section.first>div:first-child {
+    font-size: 48px;
+    font-weight: bolder;
+    gap: 23px;
+    color: rgb(255, 255, 255);
+}
+
+section.first>div :nth-child(2) {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.secimg {
+    position: relative;
+}
+
+/*----------- PRODUCT-IMG & VIDEO----------*/
+
+.secimg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.secimg video {
+    position: absolute;
+    top: 51px;
+    right: 0%;
+    width: 555px;
+}
+
+/*----------------------------- FAQ'S ----------------------*/
+
+.faq {
+    background-color: black;
+    color: white;
+}
+
+.faq h2 {
+    text-align: center;
+    padding: 34px;
+    font-size: 42px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.faqbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: #2d2d2d;
+    color: white;
+    max-width: 60vw;
+    margin: 34px auto;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+    transition: all 0.2s ease-out;
+}
+
+/*---------------- FOOTER ---------------*/
+footer {
+    color: white;
+    margin: auto;
+    max-width: 60vw;
+    padding: 14px;
+}
+
+footer .questions {
+
+    color: rgba(255, 255, 255, 0.7);
+    padding: 34px 0px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+@media screen and (max-width:1300px) {
+
+    
+    nav{
+        max-width: 120vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .second {
+        flex-wrap: wrap;
+    }
+
+    .third {
+        flex-wrap: wrap;
+    }
+
+    .fourth {
+        flex-wrap: wrap;
+    }
+
+    .secimg {
+        position: relative;
+    }
+
+    .secimg img {
+        width: 305px;
+    }
+
+    .secimg video {
+        width: 305px;
+    }
+
+    .sectimg img {
+        width: 305px;
+    }
+
+    .H-text> :first-child {
+        font-size: 32px;
+        margin-top: 30px;
+    }
+
+    .H-text> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .H-text> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .netflix-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h2 {
+        font-size: 32px;
+    }
+    
+    footer{
+        max-width: 90vw;
+    }
+    
+}
+
+@media screen and (max-width:1300px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: white;
+        gap: 25px;
+    }
+
+    .footer-item{
+        align-items: center;
+    }
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
